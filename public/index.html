@@ -24,20 +24,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Matt Groberg</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="landing">
+      <div id="top-cloud"></div>
+      <div id="bottom-cloud"></div>
+      <h2 id="intro-text">I make websites come to life</h2>
+      <div id="background">
+        <div class="section parallax" id="lake">
+          <div id="forest"></div>
+          <div id="root"></div>
+        </div>
+      </div>
+    </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- svgs for clouds -->
+      <svg width="0" height="0"> 
+        <filter id="c1-filter">
+          <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+          <feDisplacementMap in="SourceGraphic" scale="180" />
+        </filter>
+      </svg>
+      <svg width="0" height="0"> 
+        <filter id="c2-filter">
+          <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="25" />
+          <feDisplacementMap in="SourceGraphic" scale="250" />
+        </filter>
+      </svg>
   </body>
 </html>
